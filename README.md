@@ -1,4 +1,6 @@
 # Getting Started with Create React App
+This is a self-made project.
+I do not claim ownership of any of the images used in this project. If you want me to remove the images then please contact me and I will take action immediately.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
