@@ -77,5 +77,4 @@ export const WebsiteAnalyticsData = [
         "clicks": 275,
         "sales": 220
     }
-  ]
-  
+]

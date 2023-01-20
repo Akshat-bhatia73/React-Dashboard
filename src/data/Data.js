@@ -1,16 +1,15 @@
-import HomeIcon from '@mui/icons-material/Home';
-import PeopleIcon from "@mui/icons-material/People";
-import StoreIcon from "@mui/icons-material/Store";
-import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-import LogoutIcon from "@mui/icons-material/Logout";
-import ShowChartIcon from '@mui/icons-material/ShowChart';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import GradientIcon from '@mui/icons-material/Gradient';
+import HomeIcon from '@mui/icons-material/Home';
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import PeopleIcon from "@mui/icons-material/People";
 import PieChartIcon from '@mui/icons-material/PieChart';
-import ScatterPlotIcon from '@mui/icons-material/ScatterPlot';
 import RadarIcon from '@mui/icons-material/Radar';
+import ScatterPlotIcon from '@mui/icons-material/ScatterPlot';
+import ShowChartIcon from '@mui/icons-material/ShowChart';
+import StoreIcon from "@mui/icons-material/Store";
 
-export const sidebarData =  [
+export const sidebarData = [
     {
         title: 'MAIN',
         links: [
@@ -31,12 +30,12 @@ export const sidebarData =  [
                 to: '/users'
             },
             {
-                name:'Products',
+                name: 'Products',
                 icon: <StoreIcon />,
                 to: '/products'
             },
             {
-                name:'Deliveries',
+                name: 'Deliveries',
                 icon: <LocalShippingIcon />,
                 to: '/deliveries'
             },
@@ -64,7 +63,7 @@ export const sidebarData =  [
             },
             {
                 name: 'Pie Chart',
-                icon: <PieChartIcon/>,
+                icon: <PieChartIcon />,
                 to: '/charts/pie-chart'
 
             },
@@ -80,16 +79,6 @@ export const sidebarData =  [
                 to: '/charts/radar-chart'
             },
         ]
-    }, 
+    },
 
-    {
-        title: 'USER',
-        links: [
-            {
-                name: 'Sign Out',
-                icon: <LogoutIcon />,
-                to: '/auth'
-            },
-        ]
-    }
 ]

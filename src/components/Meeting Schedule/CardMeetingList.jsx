@@ -1,7 +1,7 @@
 import React from "react";
-import { meetingSchedule } from "../../data/MeetingData";
 import Button from "../button/Button";
 import CardTitle from "../card-titles/CardTitle";
+import { meetingSchedule } from "../../data/MeetingData";
 
 const CardMeetingList = () => {
   return (

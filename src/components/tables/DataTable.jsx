@@ -1,11 +1,12 @@
-import React, { useContext, useState } from "react";
-import { DataGrid } from "@mui/x-data-grid";
-import { userColumns, userRows } from "../../data/DataUsers";
-import { Link } from "react-router-dom";
-import { themeContext } from "../../context/ThemeContext";
+import React, { useState } from "react";
 import Button from "../button/Button";
+import { Link } from "react-router-dom";
+import { userColumns, userRows } from "../../data/DataUsers";
+import { useStateContext } from "../../context/ContextProvider";
+import { DataGrid } from "@mui/x-data-grid";
+
 const DataTable = () => {
-  const { darkMode } = useContext(themeContext);
+  const { darkMode } = useStateContext();
   const [data, setData] = useState(userRows);
 
   const handleDelete = (id) => {
@@ -43,7 +44,13 @@ const DataTable = () => {
     <div className="col-span-6 px-3 pt-3 mb-3 h-[500px] w-full bg-white dark:bg-second-dark  shadow-lg shadow-gray-400/35 text-dark/90 dark:text-main-text/90 rounded-md">
       <Link to={pathname + "/new"}>
         <Button
-          title={pathname === "/users" ? "Add User" : "Add Product"}
+          title={
+            pathname === "/users"
+              ? "Add User"
+              : pathname === "/products"
+              ? "Add Product"
+              : "Add Delivery"
+          }
           customStyle="text-xl py-2 px-2"
         />
       </Link>

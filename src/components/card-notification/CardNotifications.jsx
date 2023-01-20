@@ -14,7 +14,7 @@ const CardNotifications = () => {
       <div className="notifications flex flex-col child-hover:">
         {notificationsData.map((data) => {
           return (
-            <div className="flex p-2 items center justify-between border-b border-dark/20 dark:border-main-text/20 cursor-pointer hover:bg-gray-400/30 dark:hover:bg-gray-100/10">
+            <div key={data.subTitle} className="flex p-2 items center justify-between border-b border-dark/20 dark:border-main-text/20 cursor-pointer hover:bg-gray-400/30 dark:hover:bg-gray-100/10">
               <div className="left flex items-center gap-3">
                 <div className="relative">
                   <img

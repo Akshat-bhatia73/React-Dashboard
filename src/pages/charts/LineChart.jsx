@@ -1,13 +1,13 @@
 import React from "react";
+import ChartTemp from "../../components/charts/ChartTemp";
 import CardTitle from "../../components/card-titles/CardTitle";
 import { CartesianGrid, LineChart } from "recharts";
 import { Line } from "recharts";
-import { YAxis } from "recharts";
-import { Tooltip } from "recharts";
-import { XAxis } from "recharts";
 import { ResponsiveContainer } from "recharts";
+import { Tooltip } from "recharts";
 import { WebsiteAnalyticsData } from "../../data/WebsiteAnalyticsData";
-import ChartTemp from "../../components/charts/ChartTemp";
+import { XAxis } from "recharts";
+import { YAxis } from "recharts";
 
 const Linechart = () => {
   return (

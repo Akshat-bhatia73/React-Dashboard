@@ -1,11 +1,11 @@
 import React from "react";
 import CardTitle from "../../components/card-titles/CardTitle";
 import ChartTemp from "../../components/charts/ChartTemp";
+import { Cell } from "recharts";
 import { Legend, Pie } from "recharts";
 import { PieChart } from "recharts";
-import { Tooltip } from "recharts";
-import { Cell } from "recharts";
 import { ResponsiveContainer } from "recharts";
+import { Tooltip } from "recharts";
 
 const data = [
   { name: "R&D", value: 36 },
@@ -48,24 +48,27 @@ const Piechart = () => {
       <CardTitle title="Pie Chart" />
       <hr className="dark:border-main-text/20" />
       <ResponsiveContainer width={"100%"} height={400}>
-      <PieChart>
-        <Tooltip  />
-        <Legend/>
-        <Pie
-          dataKey={"value"}
-          data={data}
-          innerRadius={80}
-          outerRadius={150}
-          label={renderCustomizedLabel}
-          paddingAngle={5}
-          labelLine={false}
-        >
-                   {data.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-          ))}
-        </Pie>
-      </PieChart>
-    </ResponsiveContainer>
+        <PieChart>
+          <Tooltip />
+          <Legend />
+          <Pie
+            dataKey={"value"}
+            data={data}
+            innerRadius={80}
+            outerRadius={150}
+            label={renderCustomizedLabel}
+            paddingAngle={5}
+            labelLine={false}
+          >
+            {data.map((entry, index) => (
+              <Cell
+                key={`cell-${index}`}
+                fill={COLORS[index % COLORS.length]}
+              />
+            ))}
+          </Pie>
+        </PieChart>
+      </ResponsiveContainer>
     </ChartTemp>
   );
 };

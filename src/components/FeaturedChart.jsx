@@ -1,7 +1,7 @@
 import React from "react";
+import CardTitle from "./card-titles/CardTitle";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import CardTitle from "./card-titles/CardTitle";
 
 const FeaturedChart = () => {
   return (

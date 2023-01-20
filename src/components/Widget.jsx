@@ -1,9 +1,9 @@
 import React from "react";
-import PeopleIcon from "@mui/icons-material/People";
-import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import Button from "./button/Button";
+import PeopleIcon from "@mui/icons-material/People";
+import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 
 const Widget = ({ type, amount, growth, iconBg }) => {
   let data;
