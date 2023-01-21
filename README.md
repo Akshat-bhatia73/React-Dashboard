@@ -1,6 +1,6 @@
 This is a self-made project.
 
-Live Demo: https://euphonious-donut-74f464.netlify.app/
+Live Demo: https://react-dashboard-ak.netlify.app/
 
 I do not claim ownership of any of the images used in this project. If you want me to remove the images then please contact me and I will take action immediately.
 
