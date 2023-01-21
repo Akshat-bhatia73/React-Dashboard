@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+This is a self-made project.
+
+I do not claim ownership of any of the images used in this project. If you want me to remove the images then please contact me and I will take action immediately.
+
+## Screenshot of dashboard
+
+![DashboardDarkSidebarOpenMobile](https://user-images.githubusercontent.com/103304783/213682213-6f560441-9d28-4d7f-915e-5efa19b01d4e.png)![DashboardDarkSS](https://user-images.githubusercontent.com/103304783/213682219-38648e67-16b5-4e25-b994-01bf7e7c59fc.png)![DashboardMobile](https://user-images.githubusercontent.com/103304783/213682223-6da945d9-d9c8-44b3-8f89-0c5fd9feee40.png)![DashboardProfileOpen](https://user-images.githubusercontent.com/103304783/213682225-4f956dfd-e87e-4ea3-b62c-38190ad9fb02.png)![DashboarHomeSS](https://user-images.githubusercontent.com/103304783/213682231-7ecf89ab-c559-4bde-8c4d-30786d627599.png)
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
