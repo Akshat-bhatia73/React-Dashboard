@@ -7,8 +7,10 @@ import { Tooltip } from "recharts";
 import { XAxis } from "recharts";
 import { ResponsiveContainer } from "recharts";
 import { WebsiteAnalyticsData } from "../data/WebsiteAnalyticsData";
+import { useStateContext } from "../context/ContextProvider";
 
 const Chart = () => {
+  const { currentColor } = useStateContext()
   return (
     <div className="col-span-6 lg:col-span-3 p-3 lg:mb-6 flex flex-col gap-4 bg-white dark:bg-second-dark dark:shadow-gray-700/40 shadow-lg shadow-gray-400/35 text-dark/90 dark:text-main-text/90 rounded-md">
       <CardTitle title="Website Analytics ( December )" />
@@ -22,7 +24,7 @@ const Chart = () => {
           <Line
             type={"monotone"}
             dataKey="visits"
-            stroke="#0fa92e"
+            stroke={currentColor}
             strokeWidth={4}
           />
         </LineChart>

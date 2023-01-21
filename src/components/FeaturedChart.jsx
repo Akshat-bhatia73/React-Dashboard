@@ -1,9 +1,11 @@
 import React from "react";
 import CardTitle from "./card-titles/CardTitle";
 import { CircularProgressbar } from "react-circular-progressbar";
+import { useStateContext } from "../context/ContextProvider";
 import "react-circular-progressbar/dist/styles.css";
 
 const FeaturedChart = () => {
+  const { currentColor } = useStateContext()
   return (
     <div className="col-span-6 sm:col-span-3 flex flex-col gap-4 p-3 bg-white dark:bg-second-dark dark:shadow-gray-700/40 shadow-lg shadow-gray-400/35 text-dark/90 dark:text-main-text/90 rounded-md">
       <CardTitle title="Total Revenue" />
@@ -13,7 +15,7 @@ const FeaturedChart = () => {
           <CircularProgressbar
             value={49}
             text="49%"
-            styles={{ path: { stroke: `#f94892` }, text: { fill: `#f94892` } }}
+            styles={{ path: { stroke: currentColor }, text: { fill: currentColor } }}
           />
         </div>
         <div className="chartDetails flex flex-col items-center p-3 gap-3">

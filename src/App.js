@@ -19,7 +19,7 @@ import { useStateContext } from './context/ContextProvider'
 
 const App = () => {
 
-  const { darkMode, setActiveSettings } = useStateContext()
+  const { darkMode, setActiveSettings, currentColor } = useStateContext()
   return (
     <div className={`${darkMode ? 'dark' : ''}`}>
       <div className={`flex scroll-smooth`}>
@@ -60,7 +60,7 @@ const App = () => {
       </div>
 
       <div className='relative'>
-        <div className='fixed bottom-60 right-0 cursor-pointer hover:bg-theme-pink bg-theme-pink/80 text-white px-2 py-1 rounded-l-md '
+        <div style={{backgroundColor: currentColor }}  className='fixed bottom-60 right-0 cursor-pointer  text-white px-2 py-1 rounded-l-md '
           onClick={() => setActiveSettings(true)}
         >
           <SettingsIcon sx={{ fontSize: 30 }} />

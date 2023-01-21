@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import { useStateContext } from "../../context/ContextProvider";
 
 const Button = ({ title, customStyle }) => {
+  const {currentColor} = useStateContext()
   return (
     <button
-      className={`rounded-md bg-theme-pink dark:bg-transparent dark:border-2 dark:border-theme-pink text-white dark:text-theme-pink font-bold hover:shadow-lg hover:shadow-theme-pink/50 dark:hover:shadow-none dark:hover:bg-theme-pink/10 cursor:pointer ${customStyle} `}
+      style={{backgroundColor: currentColor}}
+      className={`rounded-md text-white font-bold cursor:pointer ${customStyle} hover:shadow-md hover:opacity-90 hover:shadow-gray-500/30 hover:bg-${currentColor} `}
     >
       {title}
     </button>

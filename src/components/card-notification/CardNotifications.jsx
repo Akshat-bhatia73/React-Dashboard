@@ -1,8 +1,10 @@
 import Button from "../button/Button";
 import React from "react";
 import { notificationsData } from "../../data/DataNotifications";
+import { useStateContext } from "../../context/ContextProvider";
 
 const CardNotifications = () => {
+  const { currentColor } = useStateContext()
   return (
     <div className="flex flex-col px-2 py-3 w-60 xs:w-80 sm:w-96 border-2 border-dark/10 dark:border-main-text/10 bg-white dark:bg-second-dark dark:shadow-gray-700/40 shadow-lg shadow-gray-400/35 text-dark/90 dark:text-main-text rounded-md">
       <div className="title flex items-center px-2 py-3 border-b border-dark/20 dark:border-main-text/20 justify-between cursor-pointer hover:bg-gray-400/30 dark:hover:bg-gray-100/10">
@@ -24,8 +26,8 @@ const CardNotifications = () => {
                   />
                   {data.status === "unread" ? (
                     <span className="flex h-3 w-3 absolute top-0 items-center justify-center">
-                      <span className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-theme-pink/70 opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-3 w-3 bg-theme-pink"></span>
+                      <span style={{backgroundColor: currentColor }} className="animate-ping absolute inline-flex h-3 w-3 rounded-full opacity-75"></span>
+                      <span style={{backgroundColor: currentColor}} className="relative inline-flex rounded-full h-3 w-3"></span>
                     </span>
                   ) : (
                     ""

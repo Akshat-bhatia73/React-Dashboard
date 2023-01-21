@@ -5,21 +5,29 @@ import { pink } from "@mui/material/colors";
 import { alpha, styled } from "@mui/material/styles";
 import { useStateContext } from "../context/ContextProvider";
 
-const PinkSwitch = styled(Switch)(({ theme }) => ({
-  "& .MuiSwitch-switchBase.Mui-checked": {
-    color: pink[600],
-    "&:hover": {
-      backgroundColor: alpha(pink[600], theme.palette.action.hoverOpacity),
-    },
-  },
-  "& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track": {
-    backgroundColor: pink[600],
-  },
-}));
+const themeColors = [
+  {name: 'skyblue', color : '#00D7FF'},
+  {name: 'pink' , color: '#f94892'},
+  {name: 'green' , color: '#3CCF4E'},
+  {name: 'lightOrange' , color: '#FD5D5D'},
+  {name: 'orange' , color: '#FF5B00'},
+  {name: 'purple' , color: '#a66cff'}
+]
 
 const Settings = () => {
-  const { darkMode, setDarkMode, activeSettings, setActiveSettings } =
+  const { darkMode, setDarkMode, currentColor, setCurrentColor ,activeSettings, setActiveSettings } =
     useStateContext();
+    const PinkSwitch = styled(Switch)(({ theme }) => ({
+      "& .MuiSwitch-switchBase.Mui-checked": {
+        color: currentColor,
+        "&:hover": {
+          backgroundColor: currentColor + '50',
+        },
+      },
+      "& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track": {
+        backgroundColor: currentColor,
+      },
+    }));
 
   return (
     <div
@@ -50,6 +58,16 @@ const Settings = () => {
             }}
           />
           <span>Dark</span>
+        </div>
+        <h1 className="text-base text-dark/50 dark:text-main-text/50 mt-4 mb-3">
+          THEME
+        </h1>
+        <div className="px-3 font-bold flex items-center justify-evenly gap-3">
+          {themeColors.map((themeColor) => {
+            return (
+              <div key={themeColor.name} style={{backgroundColor: themeColor.color}} className="cursor-pointer hover:opacity-80 w-6 h-6 rounded-md border border-dark/50 dark:border-main-text/20" onClick={() => setCurrentColor(themeColor.color)}></div>
+            )
+          })}
         </div>
       </div>
     </div>

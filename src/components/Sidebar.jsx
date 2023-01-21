@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useStateContext } from "../context/ContextProvider";
 
 const Sidebar = () => {
-  const { activeSidebar, setActiveSidebar } = useStateContext();
+  const { currentColor, activeSidebar, setActiveSidebar } = useStateContext();
 
   return (
     <div
@@ -17,7 +17,7 @@ const Sidebar = () => {
       <div className="flex items-center justify-between h-14 gap-2 p-5 dark:text-main-text">
         <Link to="/">
           <div className="logo flex items-center gap-3">
-            <DashboardIcon className="text-theme-pink" fontSize="large" />
+            <DashboardIcon sx={{color: currentColor}} fontSize="large" />
             <span className="text-xl  font-bold">Dash</span>
           </div>
         </Link>
@@ -44,7 +44,7 @@ const Sidebar = () => {
                 {item.links.map((link) => {
                   return (
                     <Link key={link.name} to={link.to}>
-                      <li className="flex items-center gap-3 p-2 cursor-pointer hover:bg-theme-pink/30 dark:hover:bg-theme-pink/20">
+                      <li className="flex items-center gap-3 p-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-100/10">
                         {link.icon}
                         <span>{link.name}</span>
                       </li>

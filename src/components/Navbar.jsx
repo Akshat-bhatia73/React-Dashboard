@@ -16,6 +16,7 @@ const Navbar = () => {
   const {
     darkMode,
     activeSidebar,
+    currentColor,
     setActiveSidebar,
     profileCardVis,
     setProfileCardVis,
@@ -32,7 +33,7 @@ const Navbar = () => {
             <div
               className={`icon ${
                 activeSidebar ? "hidden" : "visible"
-              } md:hidden p-1 rounded-full hover:bg-theme-pink/30 dark:hover:bg-theme-pink/10 cursor-pointer`}
+              } md:hidden p-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-100/10 cursor-pointer`}
               onClick={() => {
                 setActiveSidebar(true);
               }}
@@ -43,7 +44,7 @@ const Navbar = () => {
           <Tooltip title="Search" TransitionComponent={Zoom} arrow>
             <SearchOutlinedIcon
               fontSize="large"
-              className={`p-1 rounded-full hover:bg-theme-pink/30 dark:hover:bg-theme-pink/10 cursor-pointer `}
+              className={`p-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-100/10 cursor-pointer `}
             />
           </Tooltip>
           <input
@@ -54,7 +55,7 @@ const Navbar = () => {
           />
         </div>
         <div
-          className={`icons child-hover:bg-theme-pink/30 dark:child-hover:bg-theme-pink/10 child:p-1 child:rounded-full child:cursor-pointer flex items-center gap-1 xs:gap-4`}
+          className={`icons child-hover:bg-gray-200 dark:child-hover:bg-gray-100/10 child:p-1 child:rounded-full child:cursor-pointer flex items-center gap-1 xs:gap-4`}
         >
           <Tooltip title="Dark Mode" TransitionComponent={Zoom} arrow>
             <div
@@ -86,9 +87,10 @@ const Navbar = () => {
             >
               <NotificationsNoneOutlinedIcon />
               <span className="flex h-3 w-3 absolute right-1 items-center justify-center">
-                <span className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-theme-pink/70 opacity-75"></span>
+                <span style={{backgroundColor: currentColor }} className="animate-ping absolute inline-flex h-3 w-3 rounded-full opacity-75"></span>
                 <span
-                  className={`relative inline-flex rounded-full h-3 w-3 bg-theme-pink`}
+                  style={{backgroundColor: currentColor}}
+                  className={`relative inline-flex rounded-full h-3 w-3 `}
                 ></span>
               </span>
             </div>
@@ -106,7 +108,7 @@ const Navbar = () => {
           <Tooltip title="Profile" TransitionComponent={Zoom} arrow>
             <div
               className={`icon ${
-                profileCardVis ? `bg-theme-pink/30 dark:bg-theme-pink/10` : ""
+                profileCardVis ? `bg-gray-200 dark:bg-gray-100/10` : ""
               }`}
               onClick={() => {
                 setProfileCardVis(!profileCardVis);
