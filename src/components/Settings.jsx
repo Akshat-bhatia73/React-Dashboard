@@ -1,8 +1,7 @@
 import React from "react";
 import ClearIcon from "@mui/icons-material/Clear";
 import Switch from "@mui/material/Switch";
-import { pink } from "@mui/material/colors";
-import { alpha, styled } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import { useStateContext } from "../context/ContextProvider";
 
 const themeColors = [
